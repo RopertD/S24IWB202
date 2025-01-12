@@ -1,0 +1,195 @@
+<html lang="ar" dir="rtl">
+  <head >
+      <link rel="stylesheet" href="Css\css.css">
+    <meta charset="utf-8">
+    <title>مؤسسة قبضني</title>
+    </head>
+    <body dir="rtl" onload="GenerateCaptcha();">
+      <a href=""><img src="images/a.svg" alt="Logo" class="logo"></a>  
+      <ul class="nav">
+        <li class="list"><a href="Index.html">Home</a></li>
+        <li class="list"><a href="Product.html">Product</a></li>
+        <li class="list"><a href="Req-loan.html">Confirm</a></li>
+        <li class="list"><a href="Info.html">info</a></li>
+        <li class="list"><a href="contact.html">Contact</a></li>
+    </ul>
+        <div class="container">
+  <form action="/action_page.php" name="myForm">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">الاسم الكامل</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="الاسم الكامل" required onclick="arr.push(this.value)">
+    </div> 
+      <div class="col-25">
+      <label for="tel">الرقم الوطني</label>
+    </div>
+      <div class="col-75">
+      <input type="number" id="IDnum" name="IDnum" placeholder="الرقم الوطني" required onclick="arr.push(this.value)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="father">اسم الاب</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="father" name="father" placeholder="اسم الاب" required onclick="arr.push(this.value)">
+    </div>
+       <div class="col-25">
+      <label for="tel">رقم الموبايل</label>
+    </div>
+      <div class="col-75">
+      <input type="tel" id="tel" name="tel" placeholder="رقم الموبايل" required onclick="arr.push(this.value)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="loans">نوع القرض</label>
+    </div>
+    <div class="col-75">
+      <select id="loans" name="loans" required  onclick="arr.push(this.value)">
+          <option hidden disabled selected value> -- select an option -- </option>
+          <option>قرض الورشات</option>
+          <option>قرض النقل بالفائدة</option>
+          <option>القرض الزراعي</option> 
+          <option>القرض التجاري</option>
+          <option>القرض السكني</option>
+          <option>القرض التعليمي</option>
+      </select>
+    </div>
+       <div class="col-25">
+      <label for="loansV">قيمة القرض</label>
+    </div>
+      <div class="col-75">
+      <input type="number" id="loansV" name="loansV" placeholder="قيمة القرض" min="100000" max="100000000" required  onclick="arr.push(this.value)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="date">تاريخ الولادة</label>
+    </div>
+    <div class="col-75">
+      <input type="date" id="date" name="date" required onclick="arr.push(this.value)">
+    </div>
+       <div class="col-25">
+      <label for="tel">الايميل </label>
+    </div>
+      <div class="col-75">
+      <input type="email" id="email" name="email" placeholder="email@example.com" required onclick="arr.push(this.value)">
+    </div>
+  </div> 
+     
+      <div class="row">
+    <div class="col-25">
+      <label for="loansY"> عدد سنوات القرض</label>
+    </div>
+    <div class="col-75">
+      <select id="loansY" name="loansY" required onclick="arr.push(this.value)">
+          <option hidden disabled selected value> -- select an option -- </option>
+          <option>3 سنة</option>
+          <option>5 سنة</option>
+          <option>10 سنة</option>
+          <option>15 سنة</option> 
+          <option>20 سنة</option>
+      
+      </select>
+    </div>
+       <div class="col-25">
+      <label for="way_to_bay">طريقة تسديد الدفعات</label>
+    </div>
+      <div class="col-75">
+       <select id="loansY" name="loansY" required onclick="arr.push(this.value)">
+         <option hidden disabled selected value> -- select an option -- </option>
+          <option>شهرية</option>
+          <option>ربعية</option>
+          <option>سنوية</option> 
+          </select>
+    </div>
+  </div>
+  <div>  
+    <div class="col-25">
+      <label for="way_to_bay">كود الكابتشا</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="txtCaptcha"/>
+    </div>
+    <div class="col-85">
+      <input type="text" id="txtCompare" required onclick="arr.push(this.value)">  
+    </div><br><br>
+    <input type="button" id="btnrefresh" value="تغيير الكود" onclick="GenerateCaptcha();" />  
+    <br />  
+    <br />  
+</div>  
+  <br>
+  <div class="row">
+    <!-- <input type="button" value="تقديم الطلب الان" onclick="ValidateNumber()"> -->
+    <input type="submit" class="buttonsub" value="تقديم الطلب" onclick="ValidateNumber(); alert(myForm.fname.value+ '' + arr.toString())">
+    <input type="reset" value="افراغ الحقول">
+  </div>
+  </form>
+</div>
+<script>
+function ValidateNumber(){
+  var onenum = document.forms["myForm"]["tel"].value.charAt(0);
+  var twonum = document.forms["myForm"]["tel"].value.charAt(1);
+  var thrnum = document.forms["myForm"]["tel"].value.charAt(2);
+  if(!(onenum == "0" && twonum == "9")){
+    alert("يجب ان يبدأ الرقم بالرقمين 09");
+    document.forms["myForm"]["tel"].focus();
+    }   
+    var num = document.forms["myForm"]["tel"].value;
+    if (!(num.length == 10)){
+      alert("يجب ان يكون الموبايل من 10 ارقام");
+      document.forms["myForm"]["tel"].focus();
+    }else{
+      if (!(thrnum == "3" || thrnum == "4" || thrnum == "5" || thrnum == "6" || thrnum == "8" || thrnum == "9")){
+      alert("الرقم المدخل ليس لشبكات المعترف بها\n Syriatl & Mtn");
+      document.forms["myForm"]["tel"].focus();
+    }}
+    //*************************************************************************************************
+
+  var number = document.forms["myForm"]["IDnum"].value;
+  if (!(number.length==11))
+  {
+    alert("الرجاء التأكد من الرقم الوطني يجب ان يكون 11 خانة");
+    document.forms["myForm"]["IDnum"].focus();
+  }
+    //*************************************************************************************************
+
+  if (document.forms["myForm"]["loansV"].value<1000000 || document.forms["myForm"]["loansV"].value>10000000){
+  alert("يجب ان تكون فيمة القرض بين المليون و 10 مليون");
+  document.forms["myForm"]["loansV"].focus();
+}
+   //*************************************************************************************************
+
+if(document.getElementById('txtCompare').value==""){
+    alert("الرجاء ادخال كود الكابتشا")
+        }else{            
+          var str1 = removeSpaces(document.getElementById('txtCaptcha').value);  
+            var str2 = removeSpaces(document.getElementById('txtCompare').value);  
+            if (!(str1 == str2)) {
+            alert("كود الكابتشا خاطئ"); 
+            document.forms["myForm"]["txtCompare"].focus();}
+      }}
+function GenerateCaptcha() {  
+            var chr1 = Math.ceil(Math.random() * 10) + '';  
+            var chr2 = Math.ceil(Math.random() * 10) + '';  
+            var chr3 = Math.ceil(Math.random() * 10) + '';  
+            var str = new Array(4).join().replace(/(.|$)/g, function () { return ((Math.random() * 36) | 0).toString(36)[Math.random() < .5 ? "toString" : "toUpperCase"](); });  
+            var captchaCode = str + chr1 + ' ' + chr2 + ' ' + chr3;  
+            document.getElementById("txtCaptcha").value = captchaCode  
+        }   
+        /* Remove spaces from Captcha Code */  
+        function removeSpaces(string) {  
+            return string.split(' ').join('');  
+        } 
+        arr = new Array();
+        function test(x){
+          if(x.checked){
+            arr.push(x.value)
+          }
+        }
+</script>
+</body>
+</html>

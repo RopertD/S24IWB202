@@ -1,0 +1,302 @@
+*{
+	font-family: 'Cairo', sans-serif;
+}
+body{
+	background-color: black;
+    font-size: 20px;
+    margin: 0 auto;
+
+}
+
+ .bode{
+    font-size: 19px;
+     float: right;
+     color: wheat;
+     width: 45%;
+     height: 90px;
+     padding:35px;
+     margin-top: 90px;
+     text-align: center;
+     margin-bottom: -45px;
+ }
+ .menu {
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-bottom-left-radius: 30px;
+    border-bottom-style: solid;
+    border-bottom-width: 18px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-color: #9e755796;
+    border-right-style: solid;
+    border-right-width: 3px;
+    margin: 5px;
+    margin-top: 7%;
+    margin-right: 3.2%;
+    border-left-width: 3px;
+    border-left-style: solid;
+    background-color: #000000ba;
+    width: 15%;
+    position: relative;
+    float: right;
+    height: 43%;
+}
+.Title{
+    text-align: center;
+    background-color: rgba(93, 69, 51, 0.41);
+    padding: 5px;
+    box-shadow: inset 0px 0px 20px 0px #674f3d;
+    margin-top: 18px;
+    color: white;
+}
+
+/*---------------------NAV BAR--------------------------*/
+
+nav{
+
+    text-align: center;
+    color: #636363;
+    width: 87%;
+}
+.nav {
+    background-color: #463d3dd2;
+    list-style: none;
+    height: 47px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 150px;
+    border-radius: 50px;
+    align-items: center;
+    width: 80%;
+    margin-top: 2%;
+    padding-left: 1%;
+}
+.list:hover{
+    background-color: darkkhaki;
+    border-radius: 50px;
+    box-shadow: -5px 3px 5px 0px #05050573;
+    margin-top: 0.3%;
+    }
+    
+    .list {
+        background-color: vertical;
+        border-radius: 3px;
+        padding-top: 1.5%;
+        color: #f0f8ff;
+        position: inline-block;
+        float: left;
+        padding-bottom: 0.5%;
+        padding-left: 8%;
+        padding-right: 8%;
+        align-items: center;
+        text-align: center;
+        transition: all 0.5s ;
+    }
+
+a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.logo{
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-top: -20px;
+    padding-left: 15px;
+    padding-top: 5px;
+    margin-left: 30px;
+}
+
+.subject{
+    color: wheat;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgb(77, 57, 53);
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-bottom: 25px;
+    border-radius: 400px;
+}
+
+
+/*---------------------SLIDER IMAGES--------------------------*/
+@keyframes slider {
+
+    0%{
+        left: 100%;
+    }
+
+    15%{
+        left: -50%;
+    }
+
+    25%{
+        left: -100%;
+    } 
+
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -300% ;
+    }
+
+    85%{
+        left: -400%;
+    }
+
+    100%{
+        left: -500%;
+    }
+}
+
+.slider{
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    border-radius: 50px;
+    float: left;
+    position:relative;
+}
+
+.slider figure img{
+    height: 500px;
+    float: left;
+    padding-right: 30px;
+    border-radius: 50px;
+}
+
+.slider figure{
+    position: relative;
+    width:700%;
+    margin: 20px;
+    left:0;
+    text-align: left;
+    font-size: 0px;
+    animation: 35s slider infinite;
+}
+
+/*---------------------Footer--------------------------*/
+footer {
+    /* background-color: #312e2ed2; */
+    clear: both;
+    text-align: center;
+    max-width: 0 auto;
+    margin-top: 20px;
+/*    width: 100%;*/
+    color: #fff;
+    padding-left: 30px;
+}
+
+.conatact{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+	font-size: 5px;
+}
+
+.cont{
+    padding: 20px;
+}
+
+.videoa {
+    width: 95%;
+    border: tomato 3px;
+    margin-left: 2.5%;
+    margin-top: -2%;
+    margin-bottom: 2%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+/*-----------------------------------------------------------*/
+@media screen and (max-width: 950px){
+    .bode{
+        font-size: 19px;
+         float: right;
+         color: wheat;
+         width: 45%;
+         height: 90px;
+         padding:35px;
+         margin-top: 90px;
+         text-align: center;
+         margin-bottom: -45px;
+     }
+    
+    /*---------------------NAV BAR--------------------------*/
+    
+    nav{
+    
+        text-align: center;
+        color: #636363;
+        width: 87%;
+    }
+    .nav {
+        background-color: #463d3dd2;
+        list-style: none;
+        height: 47px;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 190px;
+        border-radius: 50px;
+        align-items: center;
+        width: 73%;
+        margin-top: 2%;
+        padding-left: 4%;
+    }
+    .list:hover{
+        background-color: darkkhaki;
+        border-radius: 50px;
+        box-shadow: -5px 3px 5px 0px #05050573;
+        margin-top: 0.3%;
+        }
+        
+        .list {
+            background-color: vertical;
+            border-radius: 3px;
+            padding-top: 1.5%;
+            color: #f0f8ff;
+            position: inline-block;
+            padding-bottom: 0.5%;
+            padding-left: 10%;
+            padding-right: 10%;
+            align-items: center;
+            text-align: center;
+            transition: all 0.5s ;
+        }
+    
+    a{
+        text-decoration: none;
+        color: wheat;
+    }
+
+    .logo{
+        width: 90px;
+        height: 90px;
+        float: left;
+        margin-top: -20px;
+        padding-left: 15px;
+        padding-top: 5px;
+        margin-left: 30px;
+    }
+    
+    .subject{
+        color: wheat;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 30px;
+        background-color: rgb(77, 57, 53);
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+        margin-bottom: 25px;
+        border-radius: 400px;
+    }
+}

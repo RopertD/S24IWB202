@@ -1,0 +1,162 @@
+*{
+	font-family: 'Cairo', sans-serif;
+}
+body{
+	background-color: black;
+    font-size: 20px;
+    width: 90%;
+
+}
+a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.logo{
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-top: -20px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.list:hover{
+    background-color: darkkhaki;
+    border-radius: 50px;
+    box-shadow: -5px 3px 5px 0px #05050573;
+    margin-top: 0.3%;
+}
+
+.list {
+    background-color: vertical;
+    border-radius: 3px;
+    padding-top: 1.5%;
+    color: #f0f8ff;
+    position: inline-block;
+    float: left;
+    padding-bottom: 0.5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s ;
+}
+
+.map{
+    top: 10%px;
+    /* float: left; */
+    /* margin: 42px 23px 0px 0px; */
+    position: absolute;
+    right: 701px;
+    color: #f5deb3;
+    font-size: 34px;
+    margin-right: 10%;
+}
+
+.anew{
+    margin: 20px;
+
+}
+
+nav{
+
+    text-align: center;
+    color: #636363;
+    width: 87%;
+}
+.nav {
+    background-color: #463d3dd2;
+    list-style: none;
+    height: 47px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 160px;
+    border-radius: 50px;
+    align-items: center;
+    width: 85%;
+    margin-top: 30px;
+    padding-left: 60px;
+}
+
+
+a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.logo{
+    padding-left: 3%;
+    padding-top: 5px;
+}
+
+.subject{
+    color: wheat;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-info{
+    color: #f5deb3;
+    position: absolute;
+    right: 737px;
+    top: 70%;
+    margin-right: 12.5%;
+    margin-top: 2%;
+}
+.full{
+    float: right;
+    margin-right: -127px;
+}
+
+.Contact-Us{
+    /* float: left; */
+    /* background-color: #4b4b4b; */
+    /* border-radius: 5px; */
+    padding: 10px;
+    /* margin-top: 50px; */
+    color: #f5deb3;
+    position: absolute;
+    right: 266px;
+    top: 71px;
+    font-size: 35px;
+}
+
+.input{
+color: #050505;
+    border-radius: 5px;
+    width: 222px;
+    padding: 8px;
+    margin: 10px;
+	border: 1px solid;
+	
+}
+.text{
+    width: 300px;
+    color: #000;
+    height: 200px;
+    margin: 10px;
+}
+
+.but{
+    float: right;
+    margin-top: 50;
+    margin-right: 50%;
+    width: 80px;
+    list-style: none;
+    background-color: rgb(59, 52, 52);
+    border-radius: 15px;
+    transition: all 0.5s;
+    color: wheat;
+}
+
+.but:hover{
+    background-color: rgb(46, 48, 201);
+}
+
+.ico{
+    width: 25px;
+    height: 25px;
+    margin-top: 2%;
+}
